@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE sklep [
+<!ELEMENT sklep (dzial+)>
+<!ELEMENT dzial (polka+)>
+<!ELEMENT polka (towar*)>
+<!ELEMENT towar (nazwa, cena, termin_waznosci, marka)>
+<!ELEMENT nazwa (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT termin_waznosci (#PCDATA)>
+<!ELEMENT marka (#PCDATA)>
+
+<!ATTLIST dzial kategoria (spozywczy|papierniczy|odziezowy|nie_podano) "nie_podano">
+<!ATTLIST polka numer (1|2|3|4|5|6|7|8|9) "1">
+<!ATTLIST towar rodzaj (nabial|wedliny|zeszyty|inne_papiernicze|buty_sportowe|nie_podano) "nie_podano">
+]>
+<sklep>
+    <dzial kategoria="spozywczy">
+        <polka numer="1">
+            <towar rodzaj="nabial">
+                <nazwa> Jogurt naturalny </nazwa>
+                <cena> 2 </cena>
+                <termin_waznosci> 5.12.2020 </termin_waznosci>
+                <marka> Danone </marka>
+            </towar>
+            <towar rodzaj="nabial">
+                <nazwa> Ser zolty Gouda </nazwa>
+                <cena> 8 </cena>
+                <termin_waznosci> 15.12.2020 </termin_waznosci>
+                <marka> Mlekovita </marka>
+            </towar>
+        </polka>
+        <polka numer="2">
+            <towar rodzaj="wedliny">
+                <nazwa> Szynka Prosciutto </nazwa>
+                <cena> 12.50 </cena>
+                <termin_waznosci> 13.01.2021 </termin_waznosci>
+                <marka> Italian Specials </marka>
+            </towar>
+            <towar rodzaj="wedliny">
+                <nazwa> Losos Norweski wedzony </nazwa>
+                <cena> 11 </cena>
+                <termin_waznosci> 3.02.2021 </termin_waznosci>
+                <marka> Nordic Fish </marka>
+            </towar>
+        </polka>
+    </dzial>
+    <dzial kategoria="papierniczy">
+        <polka numer="1">
+            <towar rodzaj="zeszyty">
+                <nazwa> Zeszyt A4 100 kartek </nazwa>
+                <cena> 10 </cena>
+                <termin_waznosci> nie dotyczy </termin_waznosci>
+                <marka> Hamelin </marka>
+            </towar>
+            <towar rodzaj="zeszyty">
+                <nazwa> Blok A3 </nazwa>
+                <cena> 6.50 </cena>
+                <termin_waznosci> nie dotyczy </termin_waznosci>
+                <marka> PaperArt </marka>
+            </towar>
+        </polka>
+        <polka numer="2">
+            <towar rodzaj="inne_papiernicze">
+                <nazwa> Segregator </nazwa>
+                <cena> 12.99 </cena>
+                <termin_waznosci> nie dotyczy </termin_waznosci>
+                <marka> Office Tools PL </marka>
+            </towar>
+            <towar rodzaj="inne_papiernicze">
+                <nazwa> Kartki przylepne </nazwa>
+                <cena> 5 </cena>
+                <termin_waznosci> nie dotyczy </termin_waznosci>
+                <marka> Noterinos </marka>
+            </towar>
+        </polka>
+    </dzial>
+    <dzial kategoria="odziezowy">
+        <polka numer="1">
+            <towar rodzaj="buty_sportowe">
+                <nazwa> Air Jordan </nazwa>
+                <cena> 400 </cena>
+                <termin_waznosci> nie dotyczy</termin_waznosci>
+                <marka> Nike </marka>
+            </towar>
+            <towar rodzaj="buty_sportowe">
+                <nazwa> Classic Black </nazwa>
+                <cena> 250 </cena>
+                <termin_waznosci> nie dotyczy </termin_waznosci>
+                <marka> Reebok </marka>
+            </towar>
+        </polka>
+    </dzial>
+</sklep>

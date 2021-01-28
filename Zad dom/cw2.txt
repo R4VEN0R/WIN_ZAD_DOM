@@ -1,0 +1,18 @@
+Odpowiedzi na pytania 2. i 5. podaję poniżej, reszta jest w załączniku
+
+2. Przyczyną katastrofy rakiety Arianne 5 była (niepotrzebna jak się potem okazało) zmienna odpowiedzialna za korektę prędkości w osi poziomej. Zmienna ta była konwertowana z 64-bitowej liczny float na 16-bitowego inta. W momencie gdy wartość przekroczyła maksymalną liczbę całkowitą jaką można zapisać na 16 bitach, wystąpił błąd, a jego kod stał się wartością przekazywaną do modułu pozycji. 
+
+W poprzedniej wersji rakiety zmienna ta była wykorzystywana tylko przy starcie więc uznano, że nie musi być ona chroniona przed overflowem. Natomiast w Arianne 5, zmieniono procedurę startu i zmienna ta stała się niepotrzebna. Była częścią martwego kodu, który jednak miał tragiczny wpływ na działanie nowego kodu.
+
+informacje wzięte ze strony (https://ucgosu.pl/2018/09/ariane-5-int-overflow-ktory-wysadzil-w-powietrze-rakiete/)
+
+5. RGB 
+a) Biały - 
+dziesiętnie - (255,255,255) 
+binarnie - (1111 1111, 1111 1111, 1111 1111)
+b) Szary - 
+dziesiętnie np. - (128, 128, 128)
+binarnie - (1000 0000, 1000 0000, 1000 0000)
+c)Niebieski - 
+dziesiętnie (0,0,255)
+binarnie (0000 0000, 0000 0000, 1111 1111)
